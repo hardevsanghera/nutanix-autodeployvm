@@ -2,20 +2,17 @@ Use a csv file as input to deploy custom VMs into a Nutanix Cluster.  The main C
 
 1. Create you template images and place them on EACH storage container that you want to deply VMs on.
   - Create your storage containers first
-  - Use the Image service via Prism to upload your VM image (assuming Windows 2012r2 or 2016) to EACH storage container
+  - Use the Image service via Prism to upload your VM image ( this project is assuming Windows 2012r2 or 2016) to EACH storage container
   - You could also use existing VMs to make your images - see Nutanix KB2663 at https://portal.nutanix.com/#/page/kbs/details?targetId=kA032000000TTqoCAG
   - Also useful: Export an ISO (or Image) from Image service (AHV) at http://joshsinclair.com/?p=602
 1. Edit 12VMs.csv for your needs - you don't need to have 12 VMs to deploy (or you could deploy more!)
 2. Run ./CloneCsvPrl.ps1 -csvfile ./12VMs.csv (enter cluster/userid/password when prompted)
 
 What gets done?
-1.  A VM gets cloned with chosen attributes such as vCPU/vRAM/OS Disk/Data Disk(size and label)/hostname/Static IP address
+1.  A VM gets cloned with chosen attributes such as vCPU/vRAM/OS Disk/Data Disk(size and label)/AHV Network/hostname/Static IP address
 
 Files:
 csvfile ./12VMs.csv (enter cluster/userid/password when prompted)
-
-What gets done?
-1.  A VM gets cloned with chosen attributes such as vCPU/vRAM/OS Disk/Data Disk(size and label)/hostname/Static IP address
 
 Files:
 1.  CloneCsvPrl.ps1 - main cloning script
@@ -35,12 +32,9 @@ Assumptions:
 
 Watch out!
 1. The source Windows system that you execute the scripts from should have run (from Powershell started with Administratror priveliges):
- - Set_executionPolicy RemoteSigned
+ - Set-executionPolicy RemoteSigned
  - Set-Item WSMan:\\localhost\Client\TrustedHosts *
    (or you could add your known IP addresses - plus the DHCP ones when your VMs first boot).
-
-NB:
-You should test the scripts to make sure they meet your needs, feel free to use the scripts (please ensure that Nutanix gets acknowledged if you amend them) - no support or warranty is provided, they are offered "as is".
 
 Watch out!
 1. The source Windows system that you execute the scripts from should have run (from Powershell started with Administratror priveliges):
@@ -50,3 +44,4 @@ Watch out!
 NB:
 You should test the scripts to make sure they meet your needs, feel free to use the scripts (please ensure that Nutanix gets acknowledged if you amend them) - no support or warranty is provided, they are offered "as is".
 
+hardev@nutanix.com May 2019
