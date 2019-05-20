@@ -14,21 +14,21 @@
 #csv format - column headers, all on one row
 # HEADER       EXAMPLE
 # ------       -------
-# vmname       bnkbnkw1
-# networkname  Bootcamp
-# ctr          Bootcamp
+# vmname       w1
+# networkname  PROD
+# ctr          gold
 # vmramgb      16
 # vcpus        4
 # corespercpu  1
-# image        bnkW12-GOLD-template
+# image        W12-GOLD-template
 # datadrivegb  56
-# newhostname  bankbank
+# newhostname  w1
 # staticIP     10.42.20.77
 # gway         10.42.20.1
-# dns          10.42.196.10
+# dns          10.42.00.1
 # pref         24
 # vmuser       administrator
-# vmpw         nutanix/4u
+# vmpw         Abcdefg1
 # driveletter  H
 # label        HARDEV
 
