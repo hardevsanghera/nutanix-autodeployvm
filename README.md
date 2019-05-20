@@ -29,7 +29,7 @@ Templates:
 
 Assumptions:
 1. Nutanix AHV cluster is the target for deployment
-2. VMs first boot and get an IP address etal via DHCP - from an UNMANAGED AHV network
+2. VMs first boot and get an IP address etal via DHCP - from an UNMANAGED AHV network (if it's a managed network you can set the IP address of the VM via the Create-NTNXVM.ps1 script (I've not tested this though).
 3. You will use Prism Element only, If you want to use Prism Central then you need to include the ClusterID on the VM creation calls (or you can wait for me to do it!) Soon....ish!).
 
 Watch out!
@@ -38,7 +38,7 @@ Watch out!
  - Set-Item WSMan:\\localhost\Client\TrustedHosts -Value *
    (or you could add your known IP addresses - plus the DHCP ones when your VMs first boot).
 
-Develpoped/Tested with Versions
+Developed/Tested with Versions
  - AOS 5.10.2 LTS
  - Nutanix AHV 20170830.185
  - Windows Server 2016 Datacenter (VM Image)
