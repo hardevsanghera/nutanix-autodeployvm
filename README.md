@@ -1,5 +1,8 @@
 Use a csv file as input to deploy custom VMs into a Nutanix Cluster.  The main Create-NTNXVM.ps1 script has been changed to accommodate my project (also some fizes).
 
+Installation
+1. Download nutanix-powershell and nutanix-autodeploy repos from github.com/hardevsanghera
+2. Make sure Connect-Nutanix.ps1 is in a subdirectory "lib" to the main files
 1. Create you template images and place them on EACH storage container that you want to deploy VMs on.
   - Create your storage containers first
   - Use the Image service via Prism to upload your VM image ( this project is assuming Windows 2012r2 or 2016) to EACH storage container
@@ -30,7 +33,7 @@ Assumptions:
 
 Watch out!
 1. The source Windows system that you execute the scripts from should have run (from Powershell started with Administratror priveliges):
- - Set-executionPolicy RemoteSigned
+ - Set-ExecutionPolicy ByPass
  - Set-Item WSMan:\\localhost\Client\TrustedHosts *
    (or you could add your known IP addresses - plus the DHCP ones when your VMs first boot).
 
