@@ -1,6 +1,6 @@
 Use a csv file as input to deploy custom VMs into a Nutanix Cluster.  The main Create-NTNXVM.ps1 script has been changed to accommodate my project (also some fizes).
 
-1. Create you template images and place them on EACH storage container that you want to deply VMs on.
+1. Create you template images and place them on EACH storage container that you want to deploy VMs on.
   - Create your storage containers first
   - Use the Image service via Prism to upload your VM image ( this project is assuming Windows 2012r2 or 2016) to EACH storage container
   - You could also use existing VMs to make your images - see Nutanix KB2663 at https://portal.nutanix.com/#/page/kbs/details?targetId=kA032000000TTqoCAG
@@ -10,9 +10,6 @@ Use a csv file as input to deploy custom VMs into a Nutanix Cluster.  The main C
 
 What gets done?
 1.  A VM gets cloned with chosen attributes such as vCPU/vRAM/OS Disk/Data Disk(size and label)/AHV Network/hostname/Static IP address
-
-Files:
-csvfile ./12VMs.csv (enter cluster/userid/password when prompted)
 
 Files:
 1.  CloneCsvPrl.ps1 - main cloning script
