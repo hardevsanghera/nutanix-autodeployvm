@@ -1,7 +1,7 @@
-Use a csv file as input to deploy custom VMs into a Nutanix Cluster.  The main Create-NTNXVM.ps1 script has been changed to accommodate my project (also some fizes).
+Use a csv file as input to deploy custom VMs into a Nutanix Cluster.  The main Create-NTNXVM.ps1 script has been changed to accommodate my project (also some fixes).
 
 Installation
-1. Download nutanix-powershell and nutanix-autodeploy repos from github.com/hardevsanghera
+1. Download nutanix-powershell and nutanix-autodeployvm repos from github.com/hardevsanghera
 2. Make sure Connect-Nutanix.ps1 is in a subdirectory "lib" to the main files
 1. Create you template images and place them on EACH storage container that you want to deploy VMs on.
   - Create your storage containers first
@@ -24,26 +24,26 @@ Files:
 7.  Get-Config.ps1 - query a VM's hostname, Installed OS and disk configs
 
 Templates:
-1.  Use any method to build your golden image VM, once built I recommend that you create an Image (via the Image service) on each storage container that your would deploy on - this way your gold source VM is idependant of the Image used to deploy - plus your can't power on and fiddle with an image.
+1.  Use any method to build your golden image VM, once built I recommend that you create an Image (via the Image service) on each storage container that your would deploy on - this way your gold source VM is independant of the Image used to deploy - plus your can't power on and fiddle with an image.
 
 Assumptions:
 1. Nutanix AHV cluster is the target for deployment
 2. VMs first boot and get an IP address etal via DHCP - from an UNMANAGED AHV network
-3. You will use Prism Element only, If you want to use Prism Central then you need to include the ClusterID on the VM creation calls (or you can wait for me to do it!) Soon....is!).
+3. You will use Prism Element only, If you want to use Prism Central then you need to include the ClusterID on the VM creation calls (or you can wait for me to do it!) Soon....ish!).
 
 Watch out!
-1. The source Windows system that you execute the scripts from should have run (from Powershell started with Administratror priveliges):
+1. The source Windows system that you execute the scripts from should have run the following (from Powershell started with Administratror priveliges):
  - Set-ExecutionPolicy ByPass
- - Set-Item WSMan:\\localhost\Client\TrustedHosts *
+ - Set-Item WSMan:\\localhost\Client\TrustedHosts -Value *
    (or you could add your known IP addresses - plus the DHCP ones when your VMs first boot).
 
-Versions
+Develpoped/Tested with Versions
  - AOS 5.10.2 LTS
  - Nutanix AHV 20170830.185
  - Windows Server 2016 Datacenter (VM Image)
  - Windows Server 2012 R2 Dataenter (VM Image)
 
 NB:
-You should test the scripts to make sure they meet your needs, feel free to use the scripts (please ensure that Nutanix gets acknowledged if you amend them) - no support or warranty is provided, they are offered "as is".
+You should test the scripts to make sure they meet your needs, feel free to use the scripts (please ensure that Nutanix gets acknowledged if you amend them) - no support or warranty is provided, they are offered "as is" and are not recommendations/examples of best practice.
 
 hardev@nutanix.com May 2019
