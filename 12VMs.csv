@@ -1,0 +1,13 @@
+﻿vmname,networkname,ctr,vmramgb,vcpus,corespercpu,image,datadrivegb,newhostname,staticIP,gway,dns,pref,vmuser,vmpw,driveletter,label
+stk1,DEV,BRONZE,4,2,1,Win12-tpl-on-BRONZE,64,stk1,10.42.67.150,10.42.67.1,10.42.196.10,25,administrator,nutanix/4u,D,DATA64
+stk2,PROD,SILVER,8,4,1,Win12-tpl-on-SILVER,128,stk2,10.42.67.151,10.42.67.1,10.42.196.10,25,administrator,nutanix/4u,E,DATA128
+stk3,PROD,GOLD,16,6,1,Win12-tpl-on-GOLD,256,stk3,10.42.67.152,10.42.67.1,10.42.196.10,25,administrator,nutanix/4u,F,DATA256
+stk4,DEV,BRONZE,32,8,1,Win16-tpl-on-BRONZE,512,stk4,10.42.67.153,10.42.67.1,10.42.196.10,25,administrator,nutanix/4u,G,DATA512
+stk5,PROD,SILVER,4,2,1,Win16-tpl-on-SILVER,64,stk5,10.42.67.154,10.42.67.1,10.42.196.10,25,administrator,nutanix/4u,D,DATA64
+stk6,PROD,GOLD,8,4,1,Win16-tpl-on-GOLD,128,stk6,10.42.67.155,10.42.67.1,10.42.196.10,25,administrator,nutanix/4u,E,DATA128
+stk7,DEV,BRONZE,16,6,1,Win12-tpl-on-BRONZE,256,stk7,10.42.67.156,10.42.67.1,10.42.196.10,25,administrator,nutanix/4u,F,DATA256
+stk8,PROD,SILVER,32,8,1,Win12-tpl-on-SILVER,512,stk8,10.42.67.157,10.42.67.1,10.42.196.10,25,administrator,nutanix/4u,G,DATA512
+stk9,PROD,GOLD,4,2,1,Win12-tpl-on-GOLD,64,stk9,10.42.67.158,10.42.67.1,10.42.196.10,25,administrator,nutanix/4u,D,DATA64
+stk10,DEV,BRONZE,8,4,1,Win16-tpl-on-BRONZE,128,stk10,10.42.67.159,10.42.67.1,10.42.196.10,25,administrator,nutanix/4u,E,DATA128
+stk11,PROD,SILVER,16,6,1,Win16-tpl-on-SILVER,256,stk11,10.42.67.160,10.42.67.1,10.42.196.10,25,administrator,nutanix/4u,F,DATA256
+stk12,DEV,GOLD,32,8,1,Win16-tpl-on-GOLD,512,stk12,10.42.67.161,10.42.67.1,10.42.196.10,25,administrator,nutanix/4u,G,DATA512
