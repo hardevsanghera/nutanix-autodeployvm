@@ -37,6 +37,12 @@ Watch out!
  - Set-Item WSMan:\\localhost\Client\TrustedHosts *
    (or you could add your known IP addresses - plus the DHCP ones when your VMs first boot).
 
+Versions
+ - AOS 5.10.2 LTS
+ - Nutanix AHV 20170830.185
+ - Windows Server 2016 Datacenter (VM Image)
+ - Windows Server 2012 R2 Dataenter (VM Image)
+
 NB:
 You should test the scripts to make sure they meet your needs, feel free to use the scripts (please ensure that Nutanix gets acknowledged if you amend them) - no support or warranty is provided, they are offered "as is".
 
