@@ -26,17 +26,13 @@ Templates:
 Assumptions:
 1. Nutanix AHV cluster is the target for deployment
 2. VMs first boot and get an IP address etal via DHCP - from an UNMANAGED AHV network
+3. You will use Prism Element only, If you want to use Prism Central then you need to include the ClusterID on the VM creation calls (or you can wait for me to do it!) Soon....is!).
 
 Watch out!
 1. The source Windows system that you execute the scripts from should have run (from Powershell started with Administratror priveliges):
  - Set-executionPolicy RemoteSigned
  - Set-Item WSMan:\\localhost\Client\TrustedHosts *
    (or you could add your known IP addresses - plus the DHCP ones when your VMs first boot).
-
-Watch out!
-1. The source Windows system that you execute the scripts from should have run (from Powershell started with Administratror priveliges):
- - Set-executionPolicy RemoteSigned
- - Set-Item WSMan:\\localhost\Client\TrustedHosts *
 
 NB:
 You should test the scripts to make sure they meet your needs, feel free to use the scripts (please ensure that Nutanix gets acknowledged if you amend them) - no support or warranty is provided, they are offered "as is".
