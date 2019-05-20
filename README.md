@@ -1,16 +1,16 @@
 Use a csv file as input to deploy custom VMs into a Nutanix Cluster.  The main Create-NTNXVM.ps1 script has been changed to accommodate my project (also some fixes).
 
 Installation
-0. Download and install the Nutanix Powershell cmdlets (login to  Prism Element or Prism Central then from the top right via the admin pull-down select "Download Cmdlets Installer"). 
-1. Download nutanix-powershell and nutanix-autodeployvm repos from github.com/hardevsanghera
-2. Make sure Connect-Nutanix.ps1 is in a subdirectory "lib" to the main files
-1. Create you template images and place them on EACH storage container that you want to deploy VMs on.
+1. Download and install the Nutanix Powershell cmdlets (login to  Prism Element or Prism Central then from the top right via the admin pull-down select "Download Cmdlets Installer"). 
+2. Download nutanix-powershell and nutanix-autodeployvm repos from github.com/hardevsanghera
+3. Make sure Connect-Nutanix.ps1 is in a subdirectory "lib" to the main files
+4. Create you template images and place them on EACH storage container that you want to deploy VMs on.
   - Create your storage containers first
   - Use the Image service via Prism to upload your VM image ( this project is assuming Windows 2012r2 or 2016) to EACH storage container
   - You could also use existing VMs to make your images - see Nutanix KB2663 at https://portal.nutanix.com/#/page/kbs/details?targetId=kA032000000TTqoCAG
   - Also useful: Export an ISO (or Image) from Image service (AHV) at http://joshsinclair.com/?p=602
-1. Edit 12VMs.csv for your needs - you don't need to have 12 VMs to deploy (or you could deploy more!)
-2. Run ./CloneCsvPrl.ps1 -csvfile ./12VMs.csv (enter cluster/userid/password when prompted)
+5. Edit 12VMs.csv for your needs - you don't need to have 12 VMs to deploy (or you could deploy more!)
+6. Run ./CloneCsvPrl.ps1 -csvfile ./12VMs.csv (enter cluster/userid/password when prompted)
 
 What gets done?
 1.  A VM gets cloned with chosen attributes such as vCPU/vRAM/OS Disk/Data Disk(size and label)/AHV Network/hostname/Static IP address
