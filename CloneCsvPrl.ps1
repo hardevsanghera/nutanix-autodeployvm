@@ -35,7 +35,7 @@
 Param(
   [Parameter(mandatory=$true)][string]$csvfile #file of specs of VM(s) to clone
 )
-./
+
 $sleepafterclone = 60 #sleep after deploying the last VM
 $sleepafterdiskinit = 55 #sleep after disk init 
 
