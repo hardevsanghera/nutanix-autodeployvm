@@ -41,6 +41,8 @@ Watch out!
 Developed/Tested with Versions
  - AOS 5.10.2 LTS
  - Nutanix AHV 20170830.185
+ - Cmdlets: v5.10, Build 2.10-release5.10-dev-10092018, RestAPI v1                           
+
  - Windows Server 2016 Datacenter (VM Image)
  - Windows Server 2012 R2 Dataenter (VM Image)
 
