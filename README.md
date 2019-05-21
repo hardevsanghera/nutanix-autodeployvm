@@ -30,7 +30,7 @@ Templates:
 Assumptions:
 1. Nutanix AHV cluster is the target for deployment
 2. VMs first boot and get an IP address etal via DHCP - from an UNMANAGED AHV network (if it's a managed network you can set the IP address of the VM via the Create-NTNXVM.ps1 script (I've not tested this though).
-3. You will use Prism Element only, If you want to use Prism Central then you need to include the ClusterID on the VM creation calls (or you can wait for me to do it!) Soon....ish!).
+3. You will use Prism Element only.
 
 Watch out!
 1. The source Windows system that you execute the scripts from should have run the following (from Powershell started with Administratror priveliges):
